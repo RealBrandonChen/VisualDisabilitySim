@@ -23,3 +23,7 @@
 }
 ```
 ## Recommended System
+## Getting Started
+- ### Project introduction
+> The visual disability evaluation system is a virtual reality based simulator that provides three daily life environments: supermarket shopping, stair climbing and street walking, which returns the testing result between the patients with glaucoma and healthy individuals.
+## Contributing
