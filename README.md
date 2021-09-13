@@ -23,7 +23,16 @@
 }
 ```
 ## Recommended System
+> #### Operating system: 64-bit Windows 7, 64-bit Windows 8 (8.1) or 64-bit Windows 10
+> #### CPU: CPU Core i5-2500K 3.3GHz / AMD CPU Phenom II X4 940
+> #### Memory: 8 GB RAM
+> #### GPU: Nvidia GPU GeForce GTX 1070 / AMD GPU Radeon Radeon RX590
+> #### Storage space: 5 GB free space required
+
 ## Getting Started
 - ### Project introduction
 > The visual disability evaluation system is a virtual reality based simulator that provides three daily life environments: supermarket shopping, stair climbing and street walking, which returns the testing result between the patients with glaucoma and healthy individuals.
+- ### Hardware and software requirements:
+> #### HTC VIVE/VIVE Pro Headset/Oculus+ controller (Xbox All Series / PlayStation 4) hardware connection
+> #### Steam & SteamVR ([HTC VIVE Setup Tutorial](https://support.steampowered.com/steamvr/HTC_Vive/)) + PlayStation4 controller driver ([DS4Windows](https://ryochan7.github.io/ds4windows-site/))
 ## Contributing
