@@ -42,4 +42,6 @@
 > 
 ><Image of the evaluation score src="Assets/Eva.png" width="400" height="350">
 
-# Contributing
+# Contributing and Cooporation
+#### 
+#### This project is led by the [Virtual Reality Lab](https://www.ophthalmology.hku.hk/virtualreality), HKU LKS Faculty of Med, Department of Ophthalmology. Any contributions or suggestions are welcomed. Please contact the research team for more detailed information and we are open for the cooperation.
