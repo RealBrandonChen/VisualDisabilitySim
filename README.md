@@ -32,7 +32,12 @@
 ## Getting Started
 - ### Project introduction
 > The visual disability evaluation system is a virtual reality based simulator that provides three daily life environments: supermarket shopping, stair climbing and street walking, which returns the testing result between the patients with glaucoma and healthy individuals.
-- ### Hardware and software requirements:
+- ### Hardware and software setup:
 > #### HTC VIVE/VIVE Pro Headset/Oculus+ controller (Xbox All Series / PlayStation 4) hardware connection
 > #### Steam & SteamVR ([HTC VIVE Setup Tutorial](https://support.steampowered.com/steamvr/HTC_Vive/)) + PlayStation4 controller driver ([DS4Windows](https://ryochan7.github.io/ds4windows-site/))
+- ### Download the [release demo](), unzip and click on it.
+> This is the demo of virtual supermarket scene, you will experience some situations of daily supermarket shopping, such as buying drinks, snacks, toys and so on.
+- ### Data analysis
+> Your testing result is stored in `AppPath/TestResult/Program/`. You can download and start this [post-processing system]() to generate a visual disability score with reference
+to the Mahalanobis distance (like the image below)
 ## Contributing
