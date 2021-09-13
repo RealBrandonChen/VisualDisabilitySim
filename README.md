@@ -4,7 +4,7 @@
 #### JAMA Ophthalmology: [paper link](https://jamanetwork.com/journals/jamaophthalmology/fullarticle/2762850)
 ### Paper Video
 
-## Licenese and Citation
+# Licenese and Citation
 #### This project is licensed under the terms of the MIT license. By using the software, you are agreeing to the terms of the [license agreement](LICENSE).
 
 #### If you use this code in your research, please cite us as follows:
@@ -22,14 +22,14 @@
     url = {https://doi.org/10.1001/jamaophthalmol.2020.0392},
 }
 ```
-## Recommended System
+# Recommended System
 > #### Operating system: 64-bit Windows 7, 64-bit Windows 8 (8.1) or 64-bit Windows 10
 > #### CPU: CPU Core i5-2500K 3.3GHz / AMD CPU Phenom II X4 940
 > #### Memory: 8 GB RAM
 > #### GPU: Nvidia GPU GeForce GTX 1070 / AMD GPU Radeon Radeon RX590
 > #### Storage space: 5 GB free space required
 
-## Getting Started
+# Getting Started
 - ### Project introduction
 > The visual disability evaluation system is a virtual reality based simulator that provides three daily life environments: supermarket shopping, stair climbing and street walking, which returns the testing result between the patients with glaucoma and healthy individuals.
 - ### Hardware and software setup:
@@ -41,5 +41,5 @@
 > Your testing result is stored in `AppPath/TestResult/Program/`. You can download and start this [post-processing system](https://github.com/RealBrandonChen/VisualDisabilitySim/releases/download/Compiled/VR.Visual.Disability.Performance.Scoring.rar) to generate a visual disability score with reference to the Mahalanobis distance (like the image below). Please note that this image is only for illustration and inadequate for official diagnostic.
 > 
 ><Image of the evaluation score src="Assets/Eva.png" width="400" height="350">
-    
-## Contributing
+
+# Contributing
