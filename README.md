@@ -39,4 +39,7 @@
 > This is the demo of virtual supermarket scene, you will experience some situations of daily supermarket shopping, such as buying drinks, snacks, toys and so on.
 - ### Data analysis
 > Your testing result is stored in `AppPath/TestResult/Program/`. You can download and start this [post-processing system](https://github.com/RealBrandonChen/VisualDisabilitySim/releases/download/Compiled/VR.Visual.Disability.Performance.Scoring.rar) to generate a visual disability score with reference to the Mahalanobis distance (like the image below). Please note that this image is only for illustration and inadequate for official diagnostic.
+> 
+><Image of the evaluation score src="Assets/Eva.png" width="400" height="350">
+    
 ## Contributing
