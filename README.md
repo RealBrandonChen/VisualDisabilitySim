@@ -35,9 +35,9 @@
 - ### Hardware and software setup:
 > #### HTC VIVE/VIVE Pro Headset/Oculus+ controller (Xbox All Series / PlayStation 4) hardware connection
 > #### Steam & SteamVR ([HTC VIVE Setup Tutorial](https://support.steampowered.com/steamvr/HTC_Vive/)) + PlayStation4 controller driver ([DS4Windows](https://ryochan7.github.io/ds4windows-site/))
-- ### Download the [release demo](), unzip and click on it.
+- ### Download the [release demo](https://github.com/RealBrandonChen/VisualDisabilitySim/releases/download/Compiled/Integrated_VR_Project_Build.7z), unzip and click on it.
 > This is the demo of virtual supermarket scene, you will experience some situations of daily supermarket shopping, such as buying drinks, snacks, toys and so on.
 - ### Data analysis
-> Your testing result is stored in `AppPath/TestResult/Program/`. You can download and start this [post-processing system]() to generate a visual disability score with reference
+> Your testing result is stored in `AppPath/TestResult/Program/`. You can download and start this [post-processing system](https://github.com/RealBrandonChen/VisualDisabilitySim/releases/download/Compiled/VR.Visual.Disability.Performance.Scoring.rar) to generate a visual disability score with reference
 to the Mahalanobis distance (like the image below)
 ## Contributing
