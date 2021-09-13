@@ -2,6 +2,7 @@
 ### Gif.
 #### This repository provides an introdcution to the visual evaluation system and part of the code base for the paper *"Use of Virtual Reality Simulation to Identify Vision-Related Disability in Patients With Glaucoma"*.
 #### JAMA Ophthalmology: [paper link](https://jamanetwork.com/journals/jamaophthalmology/fullarticle/2762850)
+#### Patent: Leung CK, Lam AKN, To E. Visual Disability Detection System Using Virtual Reality (U.S. Patent No.US20170273552A1).
 ### Paper Video
 
 # Licenese and Citation
@@ -44,4 +45,4 @@
 
 # Contributing and Cooporation
 #### 
-#### This project is led by the [Virtual Reality Lab](https://www.ophthalmology.hku.hk/virtualreality), HKU LKS Faculty of Med, Department of Ophthalmology. Any contributions or suggestions are welcomed. Please contact the research team for more detailed information and we are open for the cooperation.
+#### This project is led by the [Virtual Reality Lab](https://www.ophthalmology.hku.hk/virtualreality), Department of Ophthalmology, HKU LKS Faculty of Med,. Any contributions or suggestions are welcomed. Please contact the research team for more detailed information and we are open for the cooperation.
