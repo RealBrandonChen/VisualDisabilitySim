@@ -45,4 +45,4 @@
 
 # Contributing and Cooperation
 #### 
-#### This project is led by the [Virtual Reality Lab](https://www.ophthalmology.hku.hk/virtualreality), Department of Ophthalmology, HKU LKS Faculty of Med,. Any contributions or suggestions are welcomed. Please contact the research team for more detailed information and we are open for the cooperation.
+#### This project is led by the [Virtual Reality Lab](https://www.ophthalmology.hku.hk/virtualreality), Department of Ophthalmology, HKU LKS Faculty of Med. Any contributions or suggestions are welcomed. Please contact the research team for more detailed information and we are open for the cooperation.
