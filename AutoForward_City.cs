@@ -25,7 +25,6 @@ public class AutoForward_City : MonoBehaviour {
 
 	public string ProjectSelectScene;
 	public AudioClip[] ChineseAudios;
-	//private int selectedLanguage = 1; // 0 for Mandarin, 1 for English.
 
 	public	static	string 	filename;
 	public static string SavePath;
@@ -67,18 +66,12 @@ public class AutoForward_City : MonoBehaviour {
 	private String[] actionsDebugList;
 
 
-	// Awake for initialization of "me" (parameters within this script)
 	void Awake () {
-		//filename = "SaveData_" + DateTime.Now.ToString("yyyyMMdd_HHmmss") + ".txt";
 		hmd = GameObject.Find("Camera (head)").transform; //CenterEyeAnchor
 		oldPosition = transform.position;
 
 		m_Rigidbody = GameObject.Find("XRRig").GetComponent<Rigidbody>();
-
-		// Set language
-		//selectedLanguage = ??????
-		SetLanguage();
-			
+		SetLanguage();	
 	}
 
 	void Start () {
@@ -101,7 +94,7 @@ public class AutoForward_City : MonoBehaviour {
 			isTutorial = false;
 			if (SettingLight_City.LightLevel != 1)
 			{
-				SettingLight_City.LightLevel = 3; // Setting light
+				SettingLight_City.LightLevel = 3;
 			}
 		}
 
@@ -139,30 +132,13 @@ public class AutoForward_City : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		//UnityEngine.Debug.Log(isTutorial);
-		//UnityEngine.Debug.Log(isPractice);
-		//UnityEngine.Debug.Log(isRealTest);
-		//UnityEngine.Debug.Log(SettingLight_City.LightLevel);
-		/*if (isRouteTest)
-			UnityEngine.Debug.Log("Current route is: " + SettingBlockage_City.PosChoice + ". Route count is: " + routeCount + ".");*/
-
 		if (Input.GetKeyDown(KeyCode.M)) {
 			isChangingToPrac = true;
 			SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 		}
-
-		// Character Controll, Button0 for backward, 1 for forward, 3 for boost forward.
-
-		// Move automatically forward without limit
-		//transform.Translate(Vector3.forward * 20 * Time.fixedDeltaTime, Space.Self);
-		//or
-
 		CharacterController controller = GetComponent<CharacterController>();
-
-		//Vector3 prevPos = GameObject.Find("TrackingSpace2").transform.position;
 		Quaternion prevRot = GameObject.Find("TrackingSpace2").transform.rotation;
 		transform.rotation = Quaternion.Euler(0f,hmd.rotation.eulerAngles.y,0f);
-		//GameObject.Find ("TrackingSpace2").transform.position = prevPos;
 		GameObject.Find ("TrackingSpace2").transform.rotation = prevRot;
 
         try
@@ -214,15 +190,6 @@ public class AutoForward_City : MonoBehaviour {
 				}
 			}
 
-			// Check whether "Enter" is pressed and record initial position when start
-			// Press "Enter" to start/resume game, "Backspace" to pause both timer and movement, "Space"/Joystick"Circle" to start/stop movement only
-			/*
-			if (Input.GetKeyUp(KeyCode.Return)) {
-				//if (AutoMove_on == false)
-				//	oldPosition = transform.position;
-				AutoMove_on = !AutoMove_on;
-			}
-			*/
 			if (Input.GetKeyUp(KeyCode.Return))
 			{
 				AutoMove_on = true;
@@ -231,11 +198,7 @@ public class AutoForward_City : MonoBehaviour {
 			{
 				AutoMove_on = false;
 			}
-			/*
-			if (Input.GetKeyUp(KeyCode.Space) || Input.GetKeyUp(KeyCode.KeypadEnter) || Input.GetKeyUp(KeyCode.JoystickButton1)) {
-				AutoMove_on = !AutoMove_on;
-			}
-			*/
+			
 			if (!Finished && controllerButton_Forward_O &&
 				(Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.JoystickButton1) || Mathf.Abs(Input.GetAxis("JoyVertical")) > 0.2f))
 			{
@@ -275,68 +238,26 @@ public class AutoForward_City : MonoBehaviour {
 			{
 				//checks to see if the distance traveled is less than 100 * f
 				if (m_distanceTraveled < 66f)
-				{  // < 85f
+				{ 
 
 					if (Input.GetAxis("JoyVertical") < -0.2f)
 						AutoMoveSpeed = 0.5f * (1f + (Mathf.Abs(Input.GetAxis("JoyVertical")) - 0.2f) / 0.8f * 3f);
 					else if (Input.GetAxis("JoyVertical") > 0.2f)
 						AutoMoveSpeed = -0.5f * (1f + (Mathf.Abs(Input.GetAxis("JoyVertical")) - 0.2f) / 0.8f * 1f);
-
-					/*
-					if (Input.GetAxis ("JoyVertical") < -0.98f)
-						AutoMoveSpeed = 2.0f;
-					else if (Input.GetAxis ("JoyVertical") < -0.95f) //
-						AutoMoveSpeed = 1.8f;
-					else if (Input.GetAxis ("JoyVertical") < -0.9f) //
-						AutoMoveSpeed = 1.5f;
-					else if (Input.GetAxis ("JoyVertical") < -0.8f) //
-						AutoMoveSpeed = 1.25f;
-					else if (Input.GetAxis ("JoyVertical") < -0.7f)
-						AutoMoveSpeed = 1.0f;
-					else if (Input.GetAxis ("JoyVertical") < -0.5f) //
-						AutoMoveSpeed = 0.75f;
-					else if (Input.GetAxis ("JoyVertical") < -0.2f)
-						AutoMoveSpeed = 0.5f;
-					else if (Input.GetAxis ("JoyVertical") > 0.2f)
-						AutoMoveSpeed = -0.5f;
-					else if (Input.GetAxis ("JoyVertical") > 0.8f) //
-						AutoMoveSpeed = -0.75f;
-					else if (Input.GetAxis ("JoyVertical") > 0.98f)
-						AutoMoveSpeed = -1.0f;
-					*/
-
-					//if it is, creates a variable to hold the object's current position
-					//Vector3 oldPosition = transform.position;
-
-					//Allow character body move with head rotation
-					//transform.rotation *= Quaternion.Euler(0.0f,hmd.localRotation.eulerAngles.y,0.0f);        // No need in Unity 5
-
-					//then moves the object forward 1 unit per frame
-					//transform.Translate(0,0,1 * Time.deltaTime);
-					//or
-					//transform.Translate(Vector3.forward * AutoMoveSpeed * Time.deltaTime, Space.Self);
-					//*** The above codes will ignore collision!
-
-					//move the object forward 1 unit per frame with collision detection
 					Vector3 moveDirection = new Vector3((Input.GetAxis("Horizontal")), (-Input.GetAxis("Vertical")), 0);
 					moveDirection = transform.TransformDirection(Vector3.forward);
 					controller.Move(moveDirection * AutoMoveSpeed * Time.deltaTime);
 					GetComponents<AudioSource>()[2].loop = true;
-
-					//and increases the distance traveled by the difference between the old and new position
-					//m_distanceTraveled = Vector3.Distance(oldPosition, transform.position);
 					m_distanceTraveled = Mathf.Abs((oldPosition - transform.position).x);
 				}
 				else
 				{
 					Timer0812_City.enableTimer = false;
-
-					// Write record to txt file
 					if (!File.Exists(SavePath + filename))
-						using (StreamWriter sw = File.CreateText(SavePath + filename)) { }     // Create a file to write to if necessary
+						using (StreamWriter sw = File.CreateText(SavePath + filename)) { }    
 					if (!Finished)
 						using (StreamWriter sw = File.AppendText(SavePath + filename))
-						{       // Record and append new result to the bottom of file
+						{       
 							sw.WriteLine(String.Join(", ", new string[] { "Final Result", System.DateTime.Now.ToString("yyyy/MM/dd"), System.DateTime.Now.ToString("HH:mm:ss") }));
 							sw.WriteLine(String.Join(", ", new string[] { "Light Level", "Time Used (s)", "No. of Collision", "Obstacle Setting", "Time Touching Blockage (s)", "Distance Travelled (m)", "Patient Age" }));
 							sw.WriteLine(String.Join(", ", new string[] { SettingLight_City.LightLevel.ToString(), Timer0812_City.startTime.ToString("F2"),  HitCollisionValue_City.currentHit.ToString(), SettingBlockage_City.PosChoice.ToString(), 
@@ -344,9 +265,6 @@ public class AutoForward_City : MonoBehaviour {
 								(Convert.ToInt32(System.DateTime.Now.ToString("yyyy")) - Convert.ToInt32(DropdownYearOption.DOBYear)).ToString(),}));
 							sw.WriteLine();
 						}
-
-					// Automatically or manually stop the object after moving certain distance and restore distance counter to zero
-					Finished = true;
 					isInstructionFinished = false;
 					AutoMove_on = false;
 					m_distanceTraveled = 0f;
@@ -355,7 +273,6 @@ public class AutoForward_City : MonoBehaviour {
 			}
 			ActionsTrigger();
 		}
-
 		catch (Exception e)
 		{
 			UnityEngine.Debug.LogFormat(
@@ -415,20 +332,6 @@ public class AutoForward_City : MonoBehaviour {
 
 	private void SetSavingPath()
 	{
-		/*try
-		{
-			if (!Directory.Exists(SavePath))
-			{
-				Directory.CreateDirectory(SavePath);
-			}
-			UnityEngine.Debug.Log(SavePath);
-		}
-		catch (Exception e)
-		{
-			UnityEngine.Debug.LogFormat(
-				 "Unknown encountered on server. Message:'{0}' when writing an object", e.Message);
-		}*/
-
 		SavePath = (SettingLight_City.LightLevel == 3) ? DataManager.dataSavingPath[3] : DataManager.dataSavingPath[4];
 
 		if (isTutorial) filename = "City_Navigation" + "_Tutorial_" + DateTime.Now.ToString("yyyyMMdd_HHmmss") + "_SaveData.csv";
@@ -440,19 +343,11 @@ public class AutoForward_City : MonoBehaviour {
 	}
 	private void SetLanguage()
 	{
-		/*if (selectedLanguage == 0)
-		{
-			InstructionAudioClip = ChineseAudios;
-		}*/
-
+		
 		if (UserInfoLanguage.currentLanguage == "Mandarin")
 		{
 			InstructionAudioClip = ChineseAudios;
 		}
-		/*else if (UserInfoLanguage.currentLanguage != "English")
-		{
-			InstructionAudioClip = CanttoneseAudios;
-		}*/
 	}
 
 
@@ -775,13 +670,8 @@ public class AutoForward_City : MonoBehaviour {
 			{
 				ControlerModel.SetActive(true);
 				showBackButton = true;
-
-				//ControllerButtonAcess(true, true);
 				ControllerButtonAcess(false, true);
-
 				isInstructionFinished = BackwardDistanceSatisfied(backPosition);
-
-				//isInstructionFinished = KeyHoldTimeSatisfied(requestKeyPeriod, KeyCode.JoystickButton0);
 			}
 		}
 
@@ -789,13 +679,8 @@ public class AutoForward_City : MonoBehaviour {
 		{
 			ControlerModel.SetActive(true);
 			showBackButton = true;
-
-			//ControllerButtonAcess(true, true);
 			ControllerButtonAcess(false, true);
-
 			isInstructionFinished = BackwardDistanceSatisfied(backPosition);
-			//isInstructionFinished = KeyHoldTimeSatisfied(requestKeyPeriod, KeyCode.JoystickButton0);
-
 			if (((int)instructionTimeElapsed) % ((int)audioActivatedDuration) == 0
 				&& !InstructionAudioSource.isPlaying)
 			{
@@ -841,7 +726,6 @@ public class AutoForward_City : MonoBehaviour {
 				ControllerButtonAcess(true, true);
 
 				isInstructionFinished = ForwardDistanceSatisfied(forwardPosition);
-				//isInstructionFinished = KeyHoldTimeSatisfied(requestKeyPeriod, KeyCode.JoystickButton0);
 			}
 		}
 
@@ -850,8 +734,6 @@ public class AutoForward_City : MonoBehaviour {
 			ControllerButtonAcess(true, true);
 
 			isInstructionFinished = ForwardDistanceSatisfied(forwardPosition);
-			//isInstructionFinished = KeyHoldTimeSatisfied(requestKeyPeriod, KeyCode.JoystickButton0);
-
 			if (((int)instructionTimeElapsed) % ((int)audioActivatedDuration) == 0
 				&& !InstructionAudioSource.isPlaying)
 			{
@@ -987,7 +869,6 @@ public class AutoForward_City : MonoBehaviour {
 		else
         {
 			ArrowPedestrain.SetActive(true);
-			//ArrowPedestrain.transform.position = new Vector3(GameObject.Find("Tutorial_Blockage_Pedestrain").transform.position.x, ArrowPedestrain.transform.position.y, GameObject.Find("Tutorial_Blockage_Pedestrain").transform.position.z);
 		}
 	}
 
@@ -1017,23 +898,16 @@ public class AutoForward_City : MonoBehaviour {
 
 			else if (isInstructionAudioActivated && !InstructionAudioSource.isPlaying)
 			{
-				//ControllerButtonAcess(true, true);
 				ControllerButtonAcess(false, true);
-
 				isInstructionFinished = BackwardDistanceSatisfied(backPosition);
-
-				//isInstructionFinished = KeyHoldTimeSatisfied(requestKeyPeriod, KeyCode.JoystickButton0);
 			}
 		}
 
 		else
 		{
-			//ControllerButtonAcess(true, true);
+			
 			ControllerButtonAcess(false, true);
-
 			isInstructionFinished = BackwardDistanceSatisfied(backPosition);
-			//isInstructionFinished = KeyHoldTimeSatisfied(requestKeyPeriod, KeyCode.JoystickButton0);
-
 			if (((int)instructionTimeElapsed) % ((int)audioActivatedDuration) == 0
 				&& !InstructionAudioSource.isPlaying)
 			{
@@ -1070,9 +944,7 @@ public class AutoForward_City : MonoBehaviour {
 			else if (isInstructionAudioActivated && !InstructionAudioSource.isPlaying)
 			{
 				ControllerButtonAcess(true, true);
-				
 				isInstructionFinished = ForwardDistanceSatisfied(forwardPosition);
-				
 			}
 		}
 
@@ -1090,7 +962,6 @@ public class AutoForward_City : MonoBehaviour {
 
 		if (isInstructionFinished)
 		{
-            //GameObject.Find("Tutorial_Blockage_BookBoxes").transform.GetChild(12).gameObject.SetActive(true);
             if (audio_order ==12)
             {
 				ArrowBox.SetActive(true);
@@ -1148,9 +1019,6 @@ public class AutoForward_City : MonoBehaviour {
 
 		if (isInstructionFinished)
 		{
-			//UnityEngine.Debug.Log(GameObject.Find("Tutorial_Blockage_BookBoxes").transform.GetChild(12).gameObject.name);
-			//GameObject.Find("Tutorial_Blockage_BookBoxes").transform.GetChild(12).gameObject.SetActive(false);
-			//GameObject.Destroy(GameObject.Find("Tutorial_Blockage_BookBoxes").transform.GetChild(12).gameObject);
 			GameObject.Destroy(ArrowBox);
 
 			DebugForActionOrder(audio_order);
@@ -1176,7 +1044,6 @@ public class AutoForward_City : MonoBehaviour {
 
 	private void Action_RemindTheCar(int audio_order)
 	{
-		//m_Rigidbody.constraints = RigidbodyConstraints.None;
 		Action_Introduction(audio_order);
 	}
 
@@ -1187,7 +1054,6 @@ public class AutoForward_City : MonoBehaviour {
 
 	private void Action_SecondLastCheckPoint(int audio_order, float audioActivatedDuration, float forwardPosition)
 	{
-		//Action_PavementWalk2(audio_order, audioActivatedDuration, collisionObject);
 		Action_Pedestrian3(audio_order, audioActivatedDuration, forwardPosition);
 	}
 
@@ -1422,7 +1288,6 @@ public class AutoForward_City : MonoBehaviour {
 				}
 			}
 		}
-
 		else
 		{
 			ControllerButtonAcess(true, true);
@@ -1436,7 +1301,6 @@ public class AutoForward_City : MonoBehaviour {
 				InstructionAudioPlay(true, audio_order);
 			}
 		}
-
 		if (isInstructionFinished)
 		{
 			InstructionAudioPlay(false, audio_order);
