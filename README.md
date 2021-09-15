@@ -1,6 +1,9 @@
 # A visual disability evaluation system to help identify glaucoma based on VR
-### Gif.
-<Gif Supermarket src="Assets/Supermarket.gif" width="400" height="350">
+
+![Supermarket](Assets/Supermarket.gif)![Stair](Assets/Stair.gif)![CIty](Assets/City.gif)
+*Figure1. Shopping in the supermarket* &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+*Figure2. Climbing the stairs* &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+*Figure3. Walking in the street*
     
 #### This repository provides an introdcution to the visual evaluation system and part of the code base for the paper *"Use of Virtual Reality Simulation to Identify Vision-Related Disability in Patients With Glaucoma"*.
 #### JAMA Ophthalmology: [paper link](https://jamanetwork.com/journals/jamaophthalmology/fullarticle/2762850)
