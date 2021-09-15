@@ -3,10 +3,6 @@
 |![Supermarket](Assets/Supermarket.gif)     |![Stair](Assets/Stair.gif)         |   ![CIty](Assets/City.gif)        |
 | -----------                               | -----------                       | ---------                         |
 | *Figure1. Shopping in the supermarket*    | *Figure2. Climbing the stairs*    |*Figure3. Walking in the street*   |
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
     
 #### This repository provides an introdcution to the visual evaluation system and part of the code base for the paper *"Use of Virtual Reality Simulation to Identify Vision-Related Disability in Patients With Glaucoma"*.
 #### JAMA Ophthalmology: [paper link](https://jamanetwork.com/journals/jamaophthalmology/fullarticle/2762850)
