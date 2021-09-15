@@ -13,7 +13,7 @@
 #### This project is licensed under the terms of the MIT license. By using the software, you are agreeing to the terms of the [license agreement](LICENSE).
 
 #### If you use this code in your research, please cite us as follows:
-```
+```bibtex
 @article{10.1001/jamaophthalmol.2020.0392,
     author = {Lam, Alexander K. N. and To, Elaine and Weinreb, Robert N. and Yu, Marco and Mak, Heather and Lai, Gilda and Chiu, Vivian and Wu, Ken and Zhang, Xiujuan and Cheng, Timothy P. H. and Guo, Philip Yawen and Leung, Christopher K. S.},
     title = "{Use of Virtual Reality Simulation to Identify Vision-Related Disability in Patients With Glaucoma}",
