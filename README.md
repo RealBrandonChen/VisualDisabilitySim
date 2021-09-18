@@ -12,7 +12,7 @@
 # Licenese and Citation
 #### This project is licensed under the terms of the MIT license. By using the software, you are agreeing to the terms of the [license agreement](LICENSE).
 
-#### If you use this code in your research, please cite us as follows:
+#### Please cite us as follows if you're inspired by the article:
 ```bibtex
 @article{10.1001/jamaophthalmol.2020.0392,
     author = {Lam, Alexander K. N. and To, Elaine and Weinreb, Robert N. and Yu, Marco and Mak, Heather and Lai, Gilda and Chiu, Vivian and Wu, Ken and Zhang, Xiujuan and Cheng, Timothy P. H. and Guo, Philip Yawen and Leung, Christopher K. S.},
@@ -40,7 +40,7 @@
 - ### Hardware and software setup:
 > #### HTC VIVE/VIVE Pro Headset/Oculus + controller (Xbox All Series / PlayStation 4) hardware connection
 > #### Steam & SteamVR ([HTC VIVE Setup Tutorial](https://support.steampowered.com/steamvr/HTC_Vive/)) + PlayStation4 controller driver ([DS4Windows](https://ryochan7.github.io/ds4windows-site/))
-- ### Download the [release demo](https://github.com/RealBrandonChen/VisualDisabilitySim/releases/download/Compiled/Supermarket_demo_Unity.20.3.Compiled_Release.zip), unzip and click on it.
+- ### Download the [release demo](https://github.com/RealBrandonChen/VisualDisabilitySim/releases/download/Compiled/Supermarket_demo_Unity.20.3.Compiled_Release.zip), unzip and open it.
 > This is the demo of virtual supermarket scene, you will experience some situations of daily supermarket shopping, such as buying drinks, snacks, toys and so on.
 - ### Data analysis
 > Your testing result is stored in `AppPath/TestResult/Program/`. You can download and start this [post-processing system](https://github.com/RealBrandonChen/VisualDisabilitySim/releases/download/Compiled/VR.Visual.Disability.Performance.Scoring.rar) to generate a visual disability score with reference to the Mahalanobis distance (like the image below). Please note that this image is only for illustration and inadequate for official diagnostic.
