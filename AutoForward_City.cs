@@ -65,7 +65,6 @@ public class AutoForward_City : MonoBehaviour {
 	private string onCollisionObjectName;
 	private String[] actionsDebugList;
 
-
 	void Awake () {
 		hmd = GameObject.Find("Camera (head)").transform; //CenterEyeAnchor
 		oldPosition = transform.position;
@@ -101,9 +100,7 @@ public class AutoForward_City : MonoBehaviour {
 		isPractice = isChangingToPrac;
 		isRealTest = isChangingToReal;
 		isChangingToPrac = false;
-
 		SetSavingPath();
-
 		InstructionAudioSource = gameObject.GetComponents<AudioSource>()[3];
 		actionsDebugList = new String[] {
 			"Action 0 Finished: Welcome",
